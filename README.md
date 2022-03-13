@@ -16,4 +16,4 @@ To use this interface:
 - if you wish to use the sample database, run `install.php` and `installviews.php` (or run `init.sql` and `initviews.sql`, found in `data`), otherwise if you wish to use the interface for your own database, skip this step
 - enter `public/index.php` and you're good to go!
 ## Notes
-This database and interface was built as a project for my Databases course in college, which gave me the necessary insight into SQL to design and build the database itself, however PHP was not among the subjects of the course, so for the purpose of building the interface, I saw an opportunity to learn some of the basics of PHP on my own.
+This database and interface was built as a project for my Databases course in college, which gave me the necessary insight into SQL to design and build the database itself; however, PHP was not among the subjects of the course, so for the purpose of building the interface, I saw an opportunity to learn some of the basics of PHP on my own.
