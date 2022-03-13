@@ -8,7 +8,7 @@ This web interface, built in PHP, has the purpose of interacting with a locally 
 - Detailed view of employees, including airport and function details
 - View number of employees working at each registered airport
 
-CRUD operations are implemented in such a way that they can work on any MySQL database, not just the sample one given, including on views (where these operations are allowed by MySQL); however, the other operations are specific to the sample database.
+CRUD operations are implemented in such a way that they can work on any MySQL database, not just the sample one given, including on SQL views (where these operations are allowed by MySQL); however, the other operations are specific to the sample database.
 ## Configuration
 To use this interface:
 - add the details of your MySQL schema in `config.php`
