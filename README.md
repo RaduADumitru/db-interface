@@ -7,6 +7,7 @@ This web interface, built in PHP, has the purpose of interacting with a locally 
 - View details and average flight duration of flights with a duration longer than 2 hours
 - Detailed view of employees, including airport and function details
 - View number of employees working at each registered airport
+
 CRUD operations are implemented in such a way that they can work on any MySQL database, not just the sample one given, including on views (where these operations are allowed by MySQL); however, the other operations are specific to the sample database.
 ## Configuration
 To use this interface:
