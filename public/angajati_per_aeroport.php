@@ -1,6 +1,7 @@
 <?php include "templates/header.php"; ?>
 <?php require "../connect.php";
 echo "<h2>Angajati per aeroport</h2>";
+//Selects data from MySQL view created for this purpose
 $sql = "select * from angajati_per_aeroport order by id_aeroport;";
 $statement = $connection->prepare($sql);
 $statement->execute();

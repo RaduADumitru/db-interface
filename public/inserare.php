@@ -5,6 +5,7 @@
     <option value="">--Alegeti tabelul--</option>
 <?php
 require "../connect.php";
+//Get all tables in database, for option selection screen
 $sql1 = "SELECT TABLE_NAME FROM information_schema.tables WHERE table_schema='gestionare_angajati_companie_aeriana';";
 $result = $connection->prepare($sql1);
 $result->execute();
@@ -24,6 +25,7 @@ if (isset($_POST['tabel_ales']) and $_POST['tabel_ales'] != ''){
     $tabel2 = $_POST['tabel_ales'];
     echo '<label for="tabel">' . ucfirst($tabel2) . ':</label>';
     echo '<form id="inserare" method="post">';
+    //Get all columns in selected table, to create insertion textboxes for each column
     $sql2 = "SELECT COLUMN_NAME 
 FROM INFORMATION_SCHEMA.COLUMNS 
 WHERE TABLE_SCHEMA = 'gestionare_angajati_companie_aeriana' AND TABLE_NAME = '" . $tabel2 . "' ORDER BY ORDINAL_POSITION;";
@@ -39,6 +41,7 @@ WHERE TABLE_SCHEMA = 'gestionare_angajati_companie_aeriana' AND TABLE_NAME = '" 
     echo '</form>';
 }
 if (isset($_POST['tabel_inserare'])) {
+    //After entry data is written, attempt insert statement with completed data
     $tabel3 = $_POST['tabel_inserare'];
     $entry = $_POST['insertdata'];
     $sql3 = "insert into " . $tabel3 . " values (";
@@ -53,6 +56,7 @@ if (isset($_POST['tabel_inserare'])) {
     echo "Query: " . $sql3;
     $statement = $connection->prepare($sql3);
     $statement->execute();
+    //Following code only reached if statement is executed succesfully
     echo '<label>Inserare realizata cu succes!</label>';
 }
 
